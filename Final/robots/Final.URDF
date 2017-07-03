@@ -1,0 +1,1537 @@
+<robot
+  name="Final">
+  <link
+    name="Hand">
+    <inertial>
+      <origin
+        xyz="0.129288637592958 0.466172810294003 0.134407728849478"
+        rpy="0 0 0" />
+      <mass
+        value="1.43769689729479" />
+      <inertia
+        ixx="0.0754637348742417"
+        ixy="0.0160051371354131"
+        ixz="8.10570732276293E-05"
+        iyy="0.00844184701366337"
+        iyz="0.00475609505577655"
+        izz="0.0802895400374223" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Hand.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Hand.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="finger1">
+    <inertial>
+      <origin
+        xyz="0.0110548124588699 -0.000759093738962921 -0.00222741724519672"
+        rpy="0 0 0" />
+      <mass
+        value="0.00485447178040187" />
+      <inertia
+        ixx="7.36775350797906E-07"
+        ixy="-9.89986093717195E-11"
+        ixz="-1.43870662962904E-09"
+        iyy="7.85496873726242E-07"
+        iyz="1.24397307531872E-08"
+        izz="2.26727077935767E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/finger1.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/finger1.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointA_F1"
+    type="fixed">
+    <origin
+      xyz="0.0471308262462804 -0.0859589965746256 -0.0109125459288793"
+      rpy="0.182773605382286 -0.0951335730972726 3.14159265358979" />
+    <parent
+      link="Hand" />
+    <child
+      link="finger1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger1_B">
+    <inertial>
+      <origin
+        xyz="-0.0121027078859167 0.0272470178621252 0.000928955040772866"
+        rpy="0 0 0" />
+      <mass
+        value="0.00291154998187445" />
+      <inertia
+        ixx="2.44527318703978E-07"
+        ixy="1.56721281805273E-11"
+        ixz="-8.84992107980566E-10"
+        iyy="2.47698994054191E-07"
+        iyz="-1.37934990242015E-08"
+        izz="9.10717312480527E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger1_B.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger1_B.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_B_F1"
+    type="fixed">
+    <origin
+      xyz="0.0239670317406078 -0.0292121636952554 -0.0326970245054934"
+      rpy="-0.0010563321639043 0.0180579245836944 0.0282279152974621" />
+    <parent
+      link="finger1" />
+    <child
+      link="Finger1_B" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger1_C">
+    <inertial>
+      <origin
+        xyz="0.011637652069532 -0.02600688585187 -0.000760205265330147"
+        rpy="0 0 0" />
+      <mass
+        value="0.00275476937351065" />
+      <inertia
+        ixx="2.44487477502541E-07"
+        ixy="-3.19925276440353E-11"
+        ixz="2.05349249782881E-10"
+        iyy="2.40288841362679E-07"
+        iyz="-1.37763471505517E-08"
+        izz="7.25166805272361E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger1_C.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger1_C.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_C_F1"
+    type="fixed">
+    <origin
+      xyz="0.000233310307831504 -0.0296465692908842 -0.0537288459119701"
+      rpy="2.98373726535908 0.0194788468047409 0.0280016965185752" />
+    <parent
+      link="finger1" />
+    <child
+      link="Finger1_C" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="finger2">
+    <inertial>
+      <origin
+        xyz="0.0120879346810314 -0.000998425960774513 -0.00237372461685456"
+        rpy="0 0 0" />
+      <mass
+        value="0.00598803106429854" />
+      <inertia
+        ixx="1.04553447233262E-06"
+        ixy="3.07765461269432E-11"
+        ixz="-1.33205826776751E-09"
+        iyy="1.11482303491105E-06"
+        iyz="1.78038235202628E-08"
+        izz="3.21613063044309E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/finger2.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/finger2.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_A_F2"
+    type="fixed">
+    <origin
+      xyz="0.0766907423914469 -0.0830084883504815 -0.0155673659430137"
+      rpy="-0.0275190697978609 1.73341010286085E-16 3.14159265358979" />
+    <parent
+      link="Hand" />
+    <child
+      link="finger2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger2_B">
+    <inertial>
+      <origin
+        xyz="-0.0127549241779693 0.0290253930041213 0.000996020377715373"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358854059267298" />
+      <inertia
+        ixx="3.46462518025062E-07"
+        ixy="9.91156515029609E-12"
+        ixz="-1.02219630282099E-09"
+        iyy="3.50949401200573E-07"
+        iyz="-1.95905355591637E-08"
+        izz="1.29038140552133E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger2_B.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger2_B.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jont_B_F2"
+    type="fixed">
+    <origin
+      xyz="0.025271939605955 -0.0332477363392305 -0.0295253309945312"
+      rpy="-0.169130374230234 -0.0200804450603309 0.00152573149988853" />
+    <parent
+      link="finger2" />
+    <child
+      link="Finger2_B" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger2_C">
+    <inertial>
+      <origin
+        xyz="-0.0129314195890729 -0.0287307789085604 0.000815059502369778"
+        rpy="0 0 0" />
+      <mass
+        value="0.00339530212165249" />
+      <inertia
+        ixx="3.46390918323227E-07"
+        ixy="3.3635333055867E-11"
+        ixz="-1.49028773537726E-10"
+        iyy="3.40451951872142E-07"
+        iyz="-1.94163365324365E-08"
+        izz="1.02734553290366E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger2_C.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger2_C.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_C_F2"
+    type="fixed">
+    <origin
+      xyz="0.0265720490036344 0.0177873001160022 -0.0690850554695653"
+      rpy="-0.272268234163198 -0.0200804450603311 0.00152573149988828" />
+    <parent
+      link="finger2" />
+    <child
+      link="Finger2_C" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger3">
+    <inertial>
+      <origin
+        xyz="0.0106590238130482 -0.000776713928599931 -0.00211066757452726"
+        rpy="0 0 0" />
+      <mass
+        value="0.00422254807474187" />
+      <inertia
+        ixx="5.8404093634714E-07"
+        ixy="4.73395291566353E-11"
+        ixz="-1.08833936985011E-09"
+        iyy="6.22772271150117E-07"
+        iyz="9.84774694338631E-09"
+        izz="1.79663630518055E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger3.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger3.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_A_F3"
+    type="fixed">
+    <origin
+      xyz="0.102686965696126 -0.0631021068929163 -0.0028560644598741"
+      rpy="0.0153445853137899 0.0884854603858639 -2.79855777782237" />
+    <parent
+      link="Hand" />
+    <child
+      link="Finger3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger3_B">
+    <inertial>
+      <origin
+        xyz="-0.011460304726276 0.0259321389724989 0.00088629973709918"
+        rpy="0 0 0" />
+      <mass
+        value="0.00252995297566677" />
+      <inertia
+        ixx="1.93470801474969E-07"
+        ixy="9.75916137247933E-12"
+        ixz="-6.60972305236072E-10"
+        iyy="1.95993807284992E-07"
+        iyz="-1.07841656981897E-08"
+        izz="7.20485424911211E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger3_B.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger3_B.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_B_F3"
+    type="fixed">
+    <origin
+      xyz="0.0222712220832444 -0.0278224969973308 -0.0317089759005564"
+      rpy="0.0205254506394202 0.00892440540268609 0.00214464548249533" />
+    <parent
+      link="Finger3" />
+    <child
+      link="Finger3_B" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger3_C">
+    <inertial>
+      <origin
+        xyz="-0.01162240637805 -0.0254668496261732 0.000725435824757051"
+        rpy="0 0 0" />
+      <mass
+        value="0.00239376774117869" />
+      <inertia
+        ixx="1.93444917861517E-07"
+        ixy="2.18547838227743E-11"
+        ixz="-7.99276506353153E-11"
+        iyy="1.90134598243151E-07"
+        iyz="-1.07782153765571E-08"
+        izz="5.73683979543025E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger3_C.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger3_C.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_C_F3"
+    type="fixed">
+    <origin
+      xyz="0.0224759860791614 0.0245815904842986 -0.0555889211669568"
+      rpy="0.00264524657627979 0.00892440540268609 0.00214464548249521" />
+    <parent
+      link="Finger3" />
+    <child
+      link="Finger3_C" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger4">
+    <inertial>
+      <origin
+        xyz="0.00984672193637172 -0.000401101982501803 -0.00203036969896328"
+        rpy="0 0 0" />
+      <mass
+        value="0.00305391462253585" />
+      <inertia
+        ixx="3.39870470415171E-07"
+        ixy="-1.74722525482873E-11"
+        ixz="-6.65341749836816E-10"
+        iyy="3.62561385224353E-07"
+        iyz="5.96715747126159E-09"
+        izz="1.05693795749453E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger4.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger4.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_A_F4"
+    type="fixed">
+    <origin
+      xyz="0.131370456008666 -0.0721206371266669 0.0129145388795609"
+      rpy="-0.124695676479235 0.261976865906165 -3.05143405233697" />
+    <parent
+      link="Hand" />
+    <child
+      link="Finger4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger4_B">
+    <inertial>
+      <origin
+        xyz="-0.0100519479765843 0.023662480417752 0.000801489124618686"
+        rpy="0 0 0" />
+      <mass
+        value="0.00184870695663556" />
+      <inertia
+        ixx="1.1466833439058E-07"
+        ixy="1.92908875448869E-11"
+        ixz="-4.51610784295327E-10"
+        iyy="1.16124535447149E-07"
+        iyz="-6.41167848589053E-09"
+        izz="4.2717675411028E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger4_B.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger4_B.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_B_F4"
+    type="fixed">
+    <origin
+      xyz="0.0199946730815853 -0.0235396160086929 -0.0315281512968542"
+      rpy="0.146588922818807 0.00892656969556523 0.00104855931122744" />
+    <parent
+      link="Finger4" />
+    <child
+      link="Finger4_B" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Finger4_C">
+    <inertial>
+      <origin
+        xyz="-0.0102047067357368 -0.0227837339379683 0.000653280208299037"
+        rpy="0 0 0" />
+      <mass
+        value="0.00174821712074934" />
+      <inertia
+        ixx="1.14437726543645E-07"
+        ixy="1.14972439951003E-11"
+        ixz="-5.4310280500599E-11"
+        iyy="1.12612891106227E-07"
+        iyz="-4.18828676946603E-09"
+        izz="3.38423495806074E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger4_C.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Finger4_C.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_C_F4"
+    type="fixed">
+    <origin
+      xyz="0.020311528218581 0.0261294857464466 -0.046486922340311"
+      rpy="0.147130274504413 0.00892656969556589 0.00104855931122724" />
+    <parent
+      link="Finger4" />
+    <child
+      link="Finger4_C" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Thumb">
+    <inertial>
+      <origin
+        xyz="-0.0127445046007941 0.0197719163878355 0.00919673181676116"
+        rpy="0 0 0" />
+      <mass
+        value="0.0100443026538969" />
+      <inertia
+        ixx="1.19147452302629E-06"
+        ixy="-2.46498764939043E-07"
+        ixz="-2.05063913780383E-08"
+        iyy="1.22099030033809E-06"
+        iyz="1.31314655011602E-08"
+        izz="1.75356929419091E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Thumb.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Thumb.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_A_Th"
+    type="fixed">
+    <origin
+      xyz="0.00705613579890573 -0.0723234975185209 0.0543442404980752"
+      rpy="-1.58582638471745 1.48772478754665 -3.14159265358979" />
+    <parent
+      link="Hand" />
+    <child
+      link="Thumb" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Thumb_B">
+    <inertial>
+      <origin
+        xyz="0.0155646289290919 -0.00504201785515017 -0.00370788726942901"
+        rpy="0 0 0" />
+      <mass
+        value="0.0075109546250183" />
+      <inertia
+        ixx="1.1695786952111E-06"
+        ixy="2.59692551220241E-10"
+        ixz="2.37691425496959E-09"
+        iyy="1.30422105306609E-06"
+        iyz="-5.41650505434056E-09"
+        izz="5.55673170639204E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Thumb_B.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Thumb_B.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_B_Th"
+    type="fixed">
+    <origin
+      xyz="-0.00507225418885578 -0.0143711309782835 0.0106139848441266"
+      rpy="-1.69450398900784 0.249055710283983 0.71429752210915" />
+    <parent
+      link="Thumb" />
+    <child
+      link="Thumb_B" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Thumb_C">
+    <inertial>
+      <origin
+        xyz="-0.0145823780187491 -0.0295863052338037 0.000681088933033881"
+        rpy="0 0 0" />
+      <mass
+        value="0.0058125528513806" />
+      <inertia
+        ixx="7.35501681282326E-07"
+        ixy="-4.20026015756495E-10"
+        ixz="-7.30110293250238E-10"
+        iyy="7.14986258881916E-07"
+        iyz="-5.55831068240412E-08"
+        izz="2.6055785625784E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Thumb_C.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Thumb_C.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_C_Th"
+    type="fixed">
+    <origin
+      xyz="0.0244109612667414 -0.0327207709642576 0.0478323667375119"
+      rpy="1.65118002893298 -0.249055710283978 -2.42729513148063" />
+    <parent
+      link="Thumb" />
+    <child
+      link="Thumb_C" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fistA">
+    <inertial>
+      <origin
+        xyz="-0.00965822788241474 0.00509445938173081 0.00939769707709211"
+        rpy="0 0 0" />
+      <mass
+        value="0.0620670675326556" />
+      <inertia
+        ixx="5.69671057952341E-05"
+        ixy="1.84021940503624E-05"
+        ixz="1.61528453087195E-08"
+        iyy="2.57358503382865E-05"
+        iyz="1.75222460138142E-07"
+        izz="7.88007477464702E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fistA.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fistA.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jointfistA"
+    type="fixed">
+    <origin
+      xyz="0.0734706648767984 -0.0719235132736502 0.0556029725590273"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Hand" />
+    <child
+      link="fistA" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fistB">
+    <inertial>
+      <origin
+        xyz="0.00448793034383756 0.0119748821093419 0.00896488340069784"
+        rpy="0 0 0" />
+      <mass
+        value="0.0108103507411784" />
+      <inertia
+        ixx="1.88924492632077E-06"
+        ixy="-3.62931520166084E-07"
+        ixz="8.74165912236973E-09"
+        iyy="1.17144590474871E-06"
+        iyz="-3.04533350714664E-08"
+        izz="2.39236519970168E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fistB.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fistB.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FistB"
+    type="fixed">
+    <origin
+      xyz="0.0162349982169924 -0.00793580080581587 -0.00385511437918799"
+      rpy="-0.312019697286641 -0.371361312187983 -3.14071843002083" />
+    <parent
+      link="fistA" />
+    <child
+      link="fistB" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fistC">
+    <inertial>
+      <origin
+        xyz="-0.0189495761853029 -0.0165716059034484 0.0144795418540926"
+        rpy="0 0 0" />
+      <mass
+        value="0.0148930956882388" />
+      <inertia
+        ixx="3.7214302351873E-06"
+        ixy="-7.21603667401366E-07"
+        ixz="9.85359951523659E-09"
+        iyy="1.54502379328388E-06"
+        iyz="-4.60343302173896E-08"
+        izz="4.36111201924182E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fistC.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fistC.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fistC"
+    type="fixed">
+    <origin
+      xyz="0.0151293313645217 -0.0174539260612712 -0.00671567244236566"
+      rpy="-0.0950797152664536 -0.114538158161291 -3.13205142474961" />
+    <parent
+      link="fistA" />
+    <child
+      link="fistC" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="fist_wristJointA">
+    <inertial>
+      <origin
+        xyz="-0.00965822788241474 0.00509445938173081 0.00939769707709211"
+        rpy="0 0 0" />
+      <mass
+        value="0.0620670675326556" />
+      <inertia
+        ixx="5.69671057952341E-05"
+        ixy="1.84021940503624E-05"
+        ixz="1.61528453087195E-08"
+        iyy="2.57358503382865E-05"
+        iyz="1.75222460138142E-07"
+        izz="7.88007477464702E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fist_wristJointA.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fist_wristJointA.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wristJointA"
+    type="revolute">
+    <origin
+      xyz="0.0734706648767984 -0.0719235132736502 0.0556029725590273"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Hand" />
+    <child
+      link="fist_wristJointA" />
+    <axis
+      xyz="0 1 0" />
+    <limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="fist_wristJointB">
+    <inertial>
+      <origin
+        xyz="-0.000319663861209685 0.000868517742544497 0.00747119439384647"
+        rpy="0 0 0" />
+      <mass
+        value="0.0111424616821112" />
+      <inertia
+        ixx="1.45269130228323E-06"
+        ixy="-8.22651613000617E-10"
+        ixz="3.89832988925888E-09"
+        iyy="3.25396398769328E-06"
+        iyz="1.33907975595103E-08"
+        izz="3.68865409917759E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fist_wristJointB.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/fist_wristJointB.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wristJointB"
+    type="revolute">
+    <origin
+      xyz="-0.00180733117592267 0.0682845791936677 0.012523318815398"
+      rpy="1.82675202937205 0.000458505616105205 -0.00182765697314432" />
+    <parent
+      link="fist_wristJointA" />
+    <child
+      link="fist_wristJointB" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="wrist_forearmA">
+    <inertial>
+      <origin
+        xyz="-0.000319663861209685 0.000868517742544497 0.00747119439384647"
+        rpy="0 0 0" />
+      <mass
+        value="0.0111424616821112" />
+      <inertia
+        ixx="1.45269130228324E-06"
+        ixy="-8.22651613000565E-10"
+        ixz="3.89832988925882E-09"
+        iyy="3.25396398769328E-06"
+        iyz="1.33907975595104E-08"
+        izz="3.68865409917759E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/wrist_forearmA.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/wrist_forearmA.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_foreatmA"
+    type="revolute">
+    <origin
+      xyz="0.0716633337008758 -0.0844468320890482 0.123887551752695"
+      rpy="-2.88563611302075 0.00182765678103233 0.000458506381886199" />
+    <parent
+      link="Hand" />
+    <child
+      link="wrist_forearmA" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="wrist_forearmB">
+    <inertial>
+      <origin
+        xyz="0.0110293718040583 -0.00253541803519625 0.157153749101527"
+        rpy="0 0 0" />
+      <mass
+        value="0.292392860836383" />
+      <inertia
+        ixx="0.00189141237855651"
+        ixy="1.07452146613658E-05"
+        ixz="0.000156316506255066"
+        iyy="0.00194869160614147"
+        iyz="-2.03017869460826E-05"
+        izz="0.000503856455593676" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/wrist_forearmB.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/wrist_forearmB.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wrist_forearmB"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-3.14083414223173 0.00234106125977031 0.201573561598715" />
+    <parent
+      link="wrist_forearmA" />
+    <child
+      link="wrist_forearmB" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="Foreatm_biceb">
+    <inertial>
+      <origin
+        xyz="0.0110293718040583 -0.00253541803519623 0.157153749101527"
+        rpy="0 0 0" />
+      <mass
+        value="0.292392860836383" />
+      <inertia
+        ixx="0.00189141237855651"
+        ixy="1.07452146613658E-05"
+        ixz="0.000156316506255066"
+        iyy="0.00194869160614147"
+        iyz="-2.03017869460827E-05"
+        izz="0.000503856455593676" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Foreatm_biceb.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/Foreatm_biceb.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow"
+    type="revolute">
+    <origin
+      xyz="0.0716633337008758 -0.0844468320890482 0.123887551752695"
+      rpy="0.251364839173554 0.0502344303017111 -0.195315953849387" />
+    <parent
+      link="Hand" />
+    <child
+      link="Foreatm_biceb" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="bicep_ForeARM">
+    <inertial>
+      <origin
+        xyz="1.16573417585641E-15 0.00991275721317902 -2.19269047363468E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0446570766182443" />
+      <inertia
+        ixx="1.94190591241929E-05"
+        ixy="5.30719081014023E-21"
+        ixz="-3.3881317890172E-21"
+        iyy="3.20253891406834E-05"
+        iyz="-5.02925812432241E-21"
+        izz="1.88297108754324E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicep_ForeARM.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicep_ForeARM.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ELBOWb"
+    type="revolute">
+    <origin
+      xyz="0.0242020855072267 0.00732185346307506 0.315691266316252"
+      rpy="-1.87692593139189 0.0601256122236674 -0.00632766945488618" />
+    <parent
+      link="Foreatm_biceb" />
+    <child
+      link="bicep_ForeARM" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="bicebA">
+    <inertial>
+      <origin
+        xyz="1.1518563880486E-15 0.00991275721317902 -2.19269047363468E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0446570766182443" />
+      <inertia
+        ixx="1.94190591241929E-05"
+        ixy="5.30719081014023E-21"
+        ixz="-3.3881317890172E-21"
+        iyy="3.20253891406834E-05"
+        iyz="-5.02925812432241E-21"
+        izz="1.88297108754324E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicebA.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicebA.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bicepA"
+    type="revolute">
+    <origin
+      xyz="0.0966641418921833 -0.162206302402478 0.429875705895546"
+      rpy="-1.62465947123836 0.110040123114552 -0.186434014202881" />
+    <parent
+      link="Hand" />
+    <child
+      link="bicebA" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="bicepB">
+    <inertial>
+      <origin
+        xyz="5.37070388162419E-15 -0.109052812360598 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.387342666224353" />
+      <inertia
+        ixx="0.00251699930593122"
+        ixy="-9.50794483292952E-19"
+        ixz="-1.0842021724855E-19"
+        iyy="0.000679250619866577"
+        iyz="1.50771864611265E-19"
+        izz="0.00251699930593122" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicepB.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicepB.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bicepB"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-6.95194429130092E-18 0.0612832121331408 -2.60697910923784E-17" />
+    <parent
+      link="bicebA" />
+    <child
+      link="bicepB" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="bicep_sholder">
+    <inertial>
+      <origin
+        xyz="0.0180494449745871 -0.179549706046523 0.00952653743441931"
+        rpy="0 0 0" />
+      <mass
+        value="0.669964435494979" />
+      <inertia
+        ixx="0.00760582269011676"
+        ixy="-0.00119268148510156"
+        ixz="0.000221884363374559"
+        iyy="0.00160699813015934"
+        iyz="-0.000646357772133964"
+        izz="0.00795606185127518" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicep_sholder.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/bicep_sholder.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bicep_sholder"
+    type="revolute">
+    <origin
+      xyz="0.0966641418921833 -0.162206302402478 0.429875705895546"
+      rpy="-1.63131298016551 0.106536140093259 -0.247977603578091" />
+    <parent
+      link="Hand" />
+    <child
+      link="bicep_sholder" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+  <link
+    name="sholder">
+    <inertial>
+      <origin
+        xyz="-4.01580174669292E-08 2.25588271951516E-08 0.0171208360581426"
+        rpy="0 0 0" />
+      <mass
+        value="0.189920998046835" />
+      <inertia
+        ixx="0.000154354438629244"
+        ixy="-4.74124855858165E-13"
+        ixz="2.5271116994605E-11"
+        iyy="0.000159817451695558"
+        iyz="-3.71597991804661E-12"
+        izz="0.000104097292974617" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/sholder.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Final/meshes/sholder.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sholder"
+    type="revolute">
+    <origin
+      xyz="0.0972564562433843 -0.283437007707982 0.0565257750708621"
+      rpy="0.857458136684415 -0.789601895766283 2.02211397077006" />
+    <parent
+      link="bicep_sholder" />
+    <child
+      link="sholder" />
+    <axis
+      xyz="0 1 0" />
+<limit effort="10" lower="-1.57" upper="1.57" velocity="0"/>
+  </joint>
+</robot>
